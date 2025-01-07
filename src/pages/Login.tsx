@@ -20,7 +20,7 @@ export default function Login() {
     }
   }, [navigate, userEmail]);
 
-  const mutation = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationFn: () => login(enteredEmail, enteredPassword),
     onError: (error: Error) => {
       toast.error(error.message);
@@ -36,7 +36,7 @@ export default function Login() {
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    mutation.mutate();
+    mutate();
   }
 
   function handleEmailChange(event: FormEvent<HTMLInputElement>) {
@@ -97,7 +97,10 @@ export default function Login() {
             />
           </div>
 
-          <button className="text-olivine-50 text-base font-semibold bg-olivine-600 px-3 rounded-md py-1 h-11 hover:bg-olivine-700 active:bg-olivine-900 hover:drop-shadow-md mt-8 dark:bg-olivine-50 dark:hover:bg-olivine-100 dark:text-olivine-950">
+          <button
+            disabled={isPending}
+            className="text-olivine-50 text-base font-semibold bg-olivine-600 px-3 rounded-md py-1 h-11 hover:bg-olivine-700 active:bg-olivine-900 hover:drop-shadow-md mt-8 dark:bg-olivine-50 dark:hover:bg-olivine-100 dark:text-olivine-950 disabled:bg-gray-400 dark:disabled:bg-gray-400 disabled:border-gray-400 dark:disabled:border-gray-400"
+          >
             Log In
           </button>
         </form>

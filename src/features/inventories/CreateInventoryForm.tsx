@@ -46,6 +46,7 @@ export default function CreateInventoryForm({
         <input
           type="text"
           id="inventory-name"
+          required
           minLength={5}
           value={enteredInventoryName}
           onChange={handleInventoryNameChange}
