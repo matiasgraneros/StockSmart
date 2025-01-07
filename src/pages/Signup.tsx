@@ -49,7 +49,7 @@ export default function Signup() {
           <AppLogo className="fill-olivine-600 w-64 drop-shadow-sm" />
         </Link>
       </header>
-      <main className="w-5/6 max-w-[550px]  bg-olivine-50 h-[460px] mx-auto rounded-lg mt-24 shadow-sm pt-6 border border-olivine-200 px-6">
+      <main className="w-5/6 min-w-96 max-w-[550px]  bg-olivine-50 h-[460px] mx-auto rounded-lg mt-16 md:mt-24 shadow-sm pt-6 border border-olivine-200 px-6">
         <h3 className="font-semibold text-olivine-950 text-center text-2xl">
           Sign Up
         </h3>

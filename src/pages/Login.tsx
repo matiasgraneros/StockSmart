@@ -54,7 +54,7 @@ export default function Login() {
           <AppLogo className="fill-olivine-600 w-64 drop-shadow-sm dark:fill-olivine-50" />
         </Link>
       </header>
-      <main className="w-5/6 max-w-[550px]  bg-olivine-50 h-96 mx-auto rounded-lg mt-32 shadow-sm pt-6 border border-olivine-200 px-6 dark:bg-olivine-950 dark:border-olivine-700">
+      <main className="w-5/6 min-w-96 max-w-[550px] bg-olivine-50 h-96 mx-auto rounded-lg mt-20 md:mt-32 shadow-sm pt-6 border border-olivine-200 px-6 dark:bg-olivine-950 dark:border-olivine-700">
         <h3 className="font-semibold text-olivine-950 text-center text-2xl dark:text-olivine-50">
           Log In
         </h3>
