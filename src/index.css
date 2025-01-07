@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a.active.tab {
+  background-color: #f3f7f2;
+  color: #101e10;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  -webkit-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  -moz-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+html.dark a.active.tab {
+  background-color: #101e10;
+  color: #f3f7f2;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  -webkit-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  -moz-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+a.active.filter {
+  border-color: #3a6536;
+}
+html.dark a.active.filter {
+  border-color: #2e512b;
+}
+
+.table-container {
+  scrollbar-width: thin;
+}
+
+.loader {
+  width: 55px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #2e512b 0);
+  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #2e512b 0);
+  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: l7 1.5s infinite;
+}
+
+html.dark .loader {
+  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #f3f7f2 0);
+  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #f3f7f2 0);
+}
+
+@keyframes l7 {
+  0% {
+    background-position: 0 0, 0 100%, 100% 100%;
+  }
+  25% {
+    background-position: 100% 0, 0 100%, 100% 100%;
+  }
+  50% {
+    background-position: 100% 0, 0 0, 100% 100%;
+  }
+  75% {
+    background-position: 100% 0, 0 0, 0 100%;
+  }
+  100% {
+    background-position: 100% 100%, 0 0, 0 100%;
+  }
+}
