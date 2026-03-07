@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AppLogo } from '../ui/Icons';
 import { BsList, BsXLg } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import InfiniteCarousel from '../ui/InfiniteCarousel';
 
 export default function Homepage() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -84,11 +85,11 @@ export default function Homepage() {
         </Link>
       </div>
 
-      <main className="flex w-full flex-col gap-5 mt-24 items-center px-4">
-        <h1 className="text-4xl font-bold text-center text-olivine-950">
+      <main className="flex w-full flex-col gap-5 md:mt-14 mt-20 items-center px-0">
+        <h1 className="text-3xl font-bold text-center text-olivine-950">
           Inventory Management Software
         </h1>
-        <h3 className="text-center max-w-lg text-lg font-medium text-olivine-950">
+        <h3 className="text-center max-w-lg text-lg font-medium text-olivine-950 px-4">
           StockSmart: Your intelligent inventory management solution, empowering
           businesses to track, optimize, and control stock with unparalleled
           precision and ease.
@@ -99,6 +100,9 @@ export default function Homepage() {
         >
           Sign up and get started!
         </Link>
+
+        <InfiniteCarousel direction="left" />
+        <InfiniteCarousel direction="right" />
       </main>
     </div>
   );
