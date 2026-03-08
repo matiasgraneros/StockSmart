@@ -96,9 +96,9 @@ function AppContent() {
             fontSize: '16px',
             maxWidth: '500px',
             padding: '16px 24px',
-            backgroundColor: theme === 'dark' ? '#101e10' : '#f3f7f2',
-            color: theme === 'dark' ? '#f3f7f2' : '#101e10',
-            borderColor: theme === 'dark' ? '#2e512b' : '#c7d9c1',
+            backgroundColor: theme === 'dark' ? '#1d262f' : '#f3f7f8',
+            color: theme === 'dark' ? '#f3f7f8' : '#1d262f',
+            borderColor: theme === 'dark' ? '#3b5163' : '#c3d5de',
             borderWidth: '1px',
           },
         }}
